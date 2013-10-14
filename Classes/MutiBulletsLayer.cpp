@@ -67,11 +67,11 @@ void MutiBulletsLayer::AddMutiBullets(float dt)
 
 	CCFiniteTimeAction* actionLeftMove=CCMoveTo::create(realMoveDuration,ccp(bulletLeftPosition.x,CCDirector::sharedDirector()->getWinSize().height+bulletLeft->getContentSize().height/2));
 	CCFiniteTimeAction* actionLeftDone=CCCallFuncN::create(this,callfuncN_selector(MutiBulletsLayer::mutiBulletsMoveFinished));
-	CCSequence* sequenceLeft=CCSequence::create(actionLeftMove,actionLeftDone);
+	CCSequence* sequenceLeft=CCSequence::create(actionLeftMove,actionLeftDone,NULL);
 	
 	CCFiniteTimeAction* actionRightMove=CCMoveTo::create(realMoveDuration,ccp(bulletRightPosition.x,CCDirector::sharedDirector()->getWinSize().height+bulletRight->getContentSize().height/2));
 	CCFiniteTimeAction* actionRightDone=CCCallFuncN::create(this,callfuncN_selector(MutiBulletsLayer::mutiBulletsMoveFinished));
-	CCSequence* sequenceRight=CCSequence::create(actionRightMove,actionRightDone);
+	CCSequence* sequenceRight=CCSequence::create(actionRightMove,actionRightDone,NULL);
 
 	bulletLeft->runAction(sequenceLeft);
 	bulletRight->runAction(sequenceRight);
