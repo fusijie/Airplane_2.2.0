@@ -1,7 +1,7 @@
 #include "PlaneLayer.h"
 #include "GameOverScene.h"
 
-PlaneLayer* PlaneLayer::sharedPlane=NULL;//¾²Ì¬±äÁ¿ÒªÔÚcppÍâ³õÊ¼»¯
+PlaneLayer* PlaneLayer::sharedPlane=NULL;//ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½cppï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
 
 PlaneLayer::PlaneLayer(void)
 {
@@ -50,8 +50,11 @@ bool PlaneLayer::init()
 		animation->addSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("hero2.png"));
 		CCAnimate* animate=CCAnimate::create(animation);
 		
-		CCSequence* sequence=CCSequence::create(blink,CCRepeatForever::create(animate),NULL);
-		plane->runAction(sequence);
+		plane->runAction(blink);
+		plane->runAction(CCRepeatForever::create(aniamte));
+		
+		//CCSequence* sequence=CCSequence::create(blink,CCRepeatForever::create(animate),NULL);
+		//plane->runAction(sequence);
 
 		bRet=true;
 	} while (0);
@@ -61,8 +64,8 @@ bool PlaneLayer::init()
 
 void PlaneLayer::MoveTo(CCPoint location)
 {
-	//½øÐÐ±ß½çÅÐ¶Ï
-	if(isAlive && !CCDirector::sharedDirector()->isPaused())//ÒÑ¾­ÓÐNoTouchLayerÁË
+	//ï¿½ï¿½ï¿½Ð±ß½ï¿½ï¿½Ð¶ï¿½
+	if(isAlive && !CCDirector::sharedDirector()->isPaused())//ï¿½Ñ¾ï¿½ï¿½ï¿½NoTouchLayerï¿½ï¿½
 	{
 		CCPoint actualPoint;
 		CCSize winSize=CCDirector::sharedDirector()->getWinSize();
