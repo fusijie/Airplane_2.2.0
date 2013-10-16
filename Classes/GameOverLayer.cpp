@@ -1,6 +1,5 @@
 #include "GameOverLayer.h"
 #include "GameScene.h"
-#include "platform/android/jni/JniHelper.h"
 
 int GameOverLayer::highestHistoryScore=0;
 
@@ -46,12 +45,12 @@ bool GameOverLayer::init()
 
 		CCSize winSize=CCDirector::sharedDirector()->getWinSize();
 
-		//¼ÓÈëgameover_background
+		//ï¿½ï¿½ï¿½ï¿½gameover_background
 	    CCSprite* background=CCSprite::createWithSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("gameover.png"));
 		background->setPosition(ccp(winSize.width/2,winSize.height/2));
 		this->addChild(background);
 
-		//¼ÓÈëBackMenu
+		//ï¿½ï¿½ï¿½ï¿½BackMenu
 		CCSprite* normalBackToGame=CCSprite::createWithSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("btn_finish.png"));
 		CCSprite* pressedBackToGame=CCSprite::createWithSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("btn_finish.png"));
 		CCMenuItemImage* pBackItem=CCMenuItemImage::create();
@@ -61,7 +60,7 @@ bool GameOverLayer::init()
 		menuBack->setPosition(CCPointZero);
 		this->addChild(menuBack);
 
-		//¼ÓÈëscore
+		//ï¿½ï¿½ï¿½ï¿½score
 		CCString* strScore=CCString::createWithFormat("%d",score);
 		CCLabelBMFont* finalScore=CCLabelBMFont::create(strScore->m_sString.c_str(),"font/font.fnt");
 		finalScore->setColor(ccc3(143,146,147));
@@ -75,7 +74,7 @@ bool GameOverLayer::init()
 		CCFiniteTimeAction* sequence=CCSequence::create(delay,scalebig,scalelittle,showAD,NULL);
 		finalScore->runAction(sequence);
 
-		//¼ÓÈëtip
+		//ï¿½ï¿½ï¿½ï¿½tip
 		//CCLabelTTF* tip=CCLabelTTF::create("Congratulations! Your Score is","Monaco",20);
 		//tip->setColor(ccc3(143,146,147));
 		//tip->setPosition(ccp(finalScore->getPosition().x,finalScore->getPosition().y+finalScore->getContentSize().height+50));
