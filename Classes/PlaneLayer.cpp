@@ -51,7 +51,7 @@ bool PlaneLayer::init()
 		CCAnimate* animate=CCAnimate::create(animation);
 		
 		plane->runAction(blink);
-		plane->runAction(CCRepeatForever::create(aniamte));
+		plane->runAction(CCRepeatForever::create(animate));
 		
 		//CCSequence* sequence=CCSequence::create(blink,CCRepeatForever::create(animate),NULL);
 		//plane->runAction(sequence);
