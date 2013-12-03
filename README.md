@@ -3,7 +3,7 @@
 
 ## 项目
 
-这是项目 [微信飞机大战](https://github.com/fusijie/Jacky_AirPlane)开源代码，基于VS2010 + cocos2d-x v2.2.0，欢迎访问，如有任何问题请联系本人或直接pull request。
+这是项目 [微信飞机大战](https://github.com/fusijie/Jacky_AirPlane)开源代码，基于VS2008 + cocos2d-x v2.0.1，欢迎访问，如有任何问题请联系本人或直接pull request。
 
 作者：JackyFu
 
