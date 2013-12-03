@@ -1,9 +1,9 @@
-# Jacky_AirPlane
+# AirPlane
 
 
 ## 项目
 
-这是项目 [微信飞机大战](https://github.com/fusijie/Jacky_AirPlane)开源代码，基于VS2008 + cocos2d-x v2.0.1，欢迎访问，如有任何问题请联系本人或直接pull request。
+这是项目 [微信飞机大战](https://github.com/fusijie/Airplane)开源代码，基于VS2010 + cocos2d-x v2.2.0，欢迎访问，如有任何问题请联系本人或直接pull request。
 
 作者：JackyFu
 
@@ -19,10 +19,10 @@ QQ：754505629
 
 ## 版本库地址
 
-* HTTP协议: `https://github.com/fusijie/Jacky_AirPlane.git` 
+* HTTP协议: `https://github.com/fusijie/Airplane.git` 
 
 ## 克隆版本库
 
 操作示例：
 
-    $ git clone https://github.com/fusijie/Jacky_AirPlane.git
+    $ git clone https://github.com/fusijie/Airplane.git
