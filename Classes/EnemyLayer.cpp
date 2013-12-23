@@ -214,6 +214,7 @@ void EnemyLayer::enemy2MoveFinished(CCNode* pSender)
 {
 	Enemy* enmey2=(Enemy*)pSender;
 	this->removeChild(enmey2,true);
+	this->m_pAllEnemy2->removeObject(enmey2);
 }
 
 void EnemyLayer::enemy2Blowup(Enemy* enemy2)
@@ -309,6 +310,7 @@ void EnemyLayer::enemy3MoveFinished(CCNode* pSender)
 {
 	Enemy* enmey3=(Enemy*)pSender;
 	this->removeChild(enmey3,true);
+	this->m_pAllEnemy3->removeObject(enmey3);
 }
 
 void EnemyLayer::enemy3Blowup(Enemy* enemy3)
