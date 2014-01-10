@@ -79,7 +79,7 @@ void BulletLayer::RemoveBullet(CCSprite* bullet)
 	if (bullet!=NULL)
 	{
 		this->m_pAllBullet->removeObject(bullet);
-		this->removeChild(bullet,true);
+		this->bulletBatchNode->removeChild(bullet,true);
 	}
 }
 

@@ -90,6 +90,6 @@ void MutiBulletsLayer::RemoveMutiBullets(CCSprite* mutiBullets)
 	if (mutiBullets!=NULL)
 	{
 		this->m_pAllMutiBullets->removeObject(mutiBullets);
-		this->removeChild(mutiBullets,true);
+		this->mutiBullesBatchNode->removeChild(mutiBullets,true);
 	}
 }
