@@ -81,7 +81,7 @@ void MutiBulletsLayer::mutiBulletsMoveFinished(CCNode* pSender)
 {
 	CCSprite* mutiBullets=(CCSprite*)pSender;
 	m_pAllMutiBullets->removeObject(mutiBullets);
-	this->removeChild(mutiBullets,true);
+	this->mutiBullesBatchNode->removeChild(mutiBullets,true);
 	CCLog("MutiBUlletsCount=%d",m_pAllMutiBullets->count());
 }
 

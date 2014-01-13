@@ -194,6 +194,7 @@ void GameLayer::update(float dt)
 		CCSprite* bullet=(CCSprite*)bt;
 		this->bulletLayer->RemoveBullet(bullet);
 	}
+	bulletsToDelete->removeAllObjects();
 
 	//enemy2 & bullet CheckCollosion
 	CCARRAY_FOREACH(this->bulletLayer->m_pAllBullet,bt)
@@ -235,6 +236,7 @@ void GameLayer::update(float dt)
 		CCSprite* bullet=(CCSprite*)bt;
 		this->bulletLayer->RemoveBullet(bullet);
 	}
+	bulletsToDelete->removeAllObjects();
 
 	//enemy3 & bullet CheckCollosion
 	CCARRAY_FOREACH(this->bulletLayer->m_pAllBullet,bt)
@@ -279,6 +281,7 @@ void GameLayer::update(float dt)
 		CCSprite* bullet=(CCSprite*)bt;
 		this->bulletLayer->RemoveBullet(bullet);
 	}
+	bulletsToDelete->removeAllObjects();
 	bulletsToDelete->release();
 
 
@@ -321,6 +324,7 @@ void GameLayer::update(float dt)
 		CCSprite* mutiBullets=(CCSprite*)mbt;
 		this->mutiBulletsLayer->RemoveMutiBullets(mutiBullets);
 	}
+	mutiBulletsToDelete->removeAllObjects();
 
 	//enemy2 & mutiBullets CheckCollosion
 	CCARRAY_FOREACH(this->mutiBulletsLayer->m_pAllMutiBullets,mbt)
@@ -362,6 +366,7 @@ void GameLayer::update(float dt)
 		CCSprite* mutiBullets=(CCSprite*)mbt;
 		this->mutiBulletsLayer->RemoveMutiBullets(mutiBullets);
 	}
+	mutiBulletsToDelete->removeAllObjects();
 
 	//enemy3 & mutiBullets CheckCollosion
 	CCARRAY_FOREACH(this->mutiBulletsLayer->m_pAllMutiBullets,mbt)
@@ -406,6 +411,7 @@ void GameLayer::update(float dt)
 		CCSprite* mutiBullets=(CCSprite*)mbt;
 		this->mutiBulletsLayer->RemoveMutiBullets(mutiBullets);
 	}
+	mutiBulletsToDelete->removeAllObjects();
 	mutiBulletsToDelete->release();
 
 

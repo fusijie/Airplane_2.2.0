@@ -70,16 +70,16 @@ void BulletLayer::AddBullet(float dt)
 void BulletLayer::bulletMoveFinished(CCNode* pSender)
 {
 	CCSprite* bullet=(CCSprite*)pSender;
-	m_pAllBullet->removeObject(bullet);
-	this->removeChild(bullet,true);
+	this->bulletBatchNode->removeChild(bullet,true);
+	this->m_pAllBullet->removeObject(bullet);
 }
 
 void BulletLayer::RemoveBullet(CCSprite* bullet)
 {
 	if (bullet!=NULL)
 	{
-		this->m_pAllBullet->removeObject(bullet);
 		this->bulletBatchNode->removeChild(bullet,true);
+		this->m_pAllBullet->removeObject(bullet);
 	}
 }
 
